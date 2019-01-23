@@ -4,16 +4,20 @@ public class StudentDemo
 {
   private String studentID;
   private String name;
+  private String program;
+  private int maxCourses = 3;
   
   /**
    * A constructor to pass in the given ID and then name
    * @param givenID - the ID to assign
    * @param givenName- the name to assign 
+   * @param maxCourses- max number of courses
    */
-  public StudentDemo(String givenID, String givenName)
+  public StudentDemo(String givenID, String givenName, int maxCourses)
   {
       studentID = givenID;
       name = givenName;
+      this.maxCourses = maxCourses;
   }
   
   /**
@@ -49,4 +53,11 @@ public class StudentDemo
         name = givenName;
     }
     
+    public int getMaxCourses() {
+        return maxCourses;
+    }
+    
+    public void setMaxCourses(int maxCourses) {
+        this.maxCourses = maxCourses;
+    }
 }
